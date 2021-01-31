@@ -1,0 +1,16 @@
+-hblib
+
+-w3 -es2 -m -n -q
+
+hbwin.hbc
+
+-olib/${hb_plat}/${hb_comp}/deleted_hb
+
+-hbx=deleted_hb
+
+source/ohbmisc.prg
+source/ohbtip.prg
+source/ohbcore.prg
+source/ohbwin.c
+source/ohbwin.prg
+source/ohbgtinfo.prg

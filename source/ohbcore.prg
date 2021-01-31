@@ -40,11 +40,41 @@
  *
  */
 
-#ifndef __XHARBOUR__
-FUNCTION hb_osPathSeparator()
-   RETURN hb_ps()
+#ifdef __XHARBOUR__
+FUNCTION hb_PS()
 
-FUNCTION hb_OsNewLine()
+   RETURN hb_osPathSeparator()
 
-   RETURN hb_Eol()
+FUNCTION hb_Eol()
+
+   RETURN hb_OSNewLine()
+
+FUNCTION win_OemToAnsi( ... )
+
+   RETURN hb_OemToAnsi( ... )
+
+FUNCTION win_AnsiToOem( ... )
+
+   RETURN hb_AnsiToOem( ... )
+#else
+//FUNCTION hb_osPathSeparator()
+
+//   RETURN hb_ps()
+
+//FUNCTION hb_OsNewLine()
+
+//   RETURN hb_Eol()
+
+//FUNCTION hb_IsNil( a )
+
+//   RETURN a == Nil
+
+FUNCTION hb_OemToAnsi( ... )
+
+RETURN win_OemToAnsi( ... )
+
+FUNCTION hb_AnsiToOem( ... )
+
+   RETURN win_AnsiToOem( ... )
 #endif
+

@@ -1,0 +1,3 @@
+libpaths=lib/${hb_plat}/${hb_comp}
+
+libs=deleted_hb
